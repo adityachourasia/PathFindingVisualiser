@@ -1,0 +1,464 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Roboto:wght@500&family=Ubuntu+Mono&display=swap');
+
+
+*{
+    font-family: 'Roboto Mono', monospace; 
+    color:white;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* background-color: #24252A; */
+}
+
+ion-icon{
+    color: white;
+    margin: 0;
+    /* top: 50%; */
+
+    /* padding:5px; */
+}
+
+
+img{
+    width: 50px;
+    border-radius: 25px;
+}
+
+
+.slidecontainer {
+    width: 50%;
+    /* Width of the outside container */
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    width: 25px;
+    /* Set a specific slider handle width */
+    height: 25px;
+    /* Slider handle height */
+    background: #04AA6D;
+    /* Green background */
+    cursor: pointer;
+    /* Cursor on hover */
+}
+
+.slider {
+    -webkit-appearance: none;
+    /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    /* Full-width */
+    height: 25px;
+    /* Specified height */
+    background: #d3d3d3;
+    /* Grey background */
+    outline: none;
+    /* Remove outline */
+    opacity: 0.7;
+    /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+    /* Fully shown on mouse-over */
+}
+
+
+
+select {
+    /* display:block; */
+    border:none;
+    font-size: 1.5rem;
+    padding: 1em 4em 1em 1.5em;
+    /* padding: 0; */
+    background:#4d5061;
+    color:white; 
+    margin:1rem;
+    border-radius: 5px;
+}
+
+.selectHeuristicDiv{
+    /* display:none; */
+}
+
+p{
+    font-size:25px;
+    padding:2px;
+    margin: 10px;
+    /* color:blue; */
+}
+
+.instructions span{
+    /* display: flex; */
+    display: block;
+    color:darkorange;
+    padding: 10px;
+    text-align: justify;
+    /* white-space: 10px; */
+    border:2px solid rgba(135, 207, 235, 0.5);
+
+}
+
+.starthelp{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:orange;
+    display: inline-block;
+}
+
+.destinationhelp{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:yellow;
+}
+
+.blockhelp{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius:0;
+    background-color:red;
+    
+}
+
+.pathhelp{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    /* background-color: rgb(0, 0, 0); */
+    border-radius: 0;
+    display: inline-block;
+    /* background-color:aqua; */
+}
+
+.visitedNodehelp{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:blue;
+    display: inline-block;
+    /* background-color:rgb(130, 224, 130); */
+    /* background-color:rgb(9, 255, 0,.5); */
+}
+
+.initialNode1help{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color:rgba(135, 207, 235, 0.5);
+}
+
+.initialNode2help{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(86, 207, 254,0.7);
+    display: inline-block;
+    
+}
+
+.initialNode3help{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color:rgb(135, 206, 235);
+}
+
+.modal {
+    /* Hidden by default */
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+  
+  /* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+  
+/* The Close Button */
+.close {
+color: #060000;
+/* position: relative; */
+/* left: 50%; */
+/* content:" " */
+/* float: right;; */
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+
+
+.help{
+display: flex;
+width:auto;
+height: 100px;
+background-color:#f4511e;
+text-align: center;
+/* text-transform: capitalize; */
+align-items: center;
+/* vertical-align: middle; */
+}
+
+
+.footer{
+    display: flex;
+    width:auto;
+    height:auto;
+    background-color:#f4511e;
+    text-align: center;
+    /* text-transform: capitalize; */
+    align-items: center;
+    /* vertical-align: middle; */
+}
+    
+
+
+li, a, button{
+    font-family: 'Roboto Mono', monospace; 
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+
+}
+
+
+header{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0px 5%;
+    /* background-color: #3b3c47; */
+    background-color: #4d5061;
+    /* background-color:#4d5061; */
+
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav__links{
+    /* list-style-type: none; */
+    list-style: none;
+    /* list */
+}
+
+.nav__links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+.nav__links li a{
+    transition: all 0.3s ease 0s;
+}
+
+
+.nav__links li a:hover{
+    color:#0088a9;
+    transition: all 0.3s ease 0s;
+
+}
+
+
+button{
+    border:none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    border-radius:10px;
+    background-color: #f4511e;
+    /* border: none; */
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1rem;
+    padding: 1rem;
+    width:auto;
+    height: auto;
+    /* transition: all 0.5s; */
+    /* cursor: pointer; */
+    margin: 1rem;
+
+}
+
+button:hover{
+    /* background-color: rgba(0,136,169,0.8); */
+    background-color:#4d5061;
+}
+
+
+button span {
+position: relative;
+transition: 0.5s;
+}
+
+
+button span:after {
+content: '\00bb';
+/* content: '\00bb'; */
+position: absolute;
+opacity: 0;
+top: 0;
+right: 0px;
+/* right: -20px; */
+transition: 0.5s;
+}
+
+button:hover span {
+padding-right: 2rem;
+/* transform: scale; */
+/* scale: 2 */
+}
+
+button:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+
+
+label{
+    color: white;
+    padding: 10px;
+    font-size: 30px;
+}
+
+
+/* 
+.footer {
+    background-color: dimgray;
+    margin: 0;
+    padding: 10px;
+} */
+
+.start{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:orange;
+
+}
+
+.destination{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:yellow;
+}
+
+.block{
+    width: 20px;
+    height: 20px;
+    border-radius:0;
+    background-color:red;
+    
+}
+
+.path{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius: 0;
+    /* background-color:aqua; */
+}
+
+.neighbours{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:rgb(130, 224, 130);
+    
+    /* background-color:rgb(130, 224, 130); */
+}
+
+/* .exploringNode{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:rgb(91, 251, 11);
+    
+} */
+
+.visitedNode{
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    background-color:blue;
+    /* background-color:rgb(130, 224, 130); */
+    /* background-color:rgb(9, 255, 0,.5); */
+}
+
+.initialNode1{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color:rgba(135, 207, 235, 0.5);
+}
+
+.initialNode2{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: rgb(86, 207, 254,0.7);
+    
+}
+
+.initialNode3{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color:rgb(135, 206, 235);
+}
+
+
+
+td div:hover{
+    transform: scale(1.2);
+    border-radius: 5px;
+
+} 
+ 
+td{
+    padding: 2px;
+
+}
+
+table{
+    margin: 20px;
+}
+
+

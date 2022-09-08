@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Path Finding Algorithmns and Visualisation</title>
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <img class="logo" src="./me.jpg" alt="logo of aditya chourasia">
+        <nav>
+            <ul class="nav__links">
+                <li>
+                    <a href="#" id="">
+                        <!-- <p> -->
+                            Projects
+                        <!-- </p>  -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="">
+                        <!-- <p> -->
+                            About
+                        <!-- </p>  -->
+                    </a>
+                </li>
+            
+                <li>
+                    <a href="mailto:adityabsd@gmail.com">
+                        <!-- <p> -->
+                            <!-- <ion-icon name="mail"></ion-icon>  -->
+                            Email Aditya
+                                               
+                        <!-- </p>  -->
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    
+    </header>
+
+
+
+    <div class="help" id="help">
+        <button id="helpButton">Tutorial</button>
+        <div id="tutorial" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="instructions">
+               
+               <span> <div class="starthelp"></div> Starting Node</span>
+                <span><div class="destinationhelp"></div> Destination Node</span>
+                <span><div class="blockhelp"></div> Blocks or Restricted Path</span>
+                <span><div class="pathhelp"></div> Path Discovered</span>
+                <span><div class="visitedNodehelp"></div> Explored Nodes</span>
+                <span><div class="initialNode3help"></div> Neighbour Node (High Cost)</span>
+                <span><div class="initialNode2help"></div> Neighbour Node (Medium Cost)</span>
+                <span><div class="initialNode1help"></div> Neighbour Node (Low Cost)</span>
+                <span><div class="blockhelp"></div> Left Click Or Drag On Tiles To Add Blocks</span>
+                <span><div class="starthelp"></div> Use Right Click To Cut Start Node, Use Right Click To Paste Start Node On Another Tile</span>
+                <span><div class="destinationhelp"></div> Use Right Click To Cut Destination Node, Use Right Click To Paste Destination Node On Another Tile</span>
+                <span>Choose The Algorithmn</span>
+                <span>Choose The Heuristic</span>
+                <span>Choose The Heuristic Value</span>
+                <span>Choose Animation Speed</span>
+                <span>Start Simulation</span>
+               
+
+
+            </div>
+          </div>
+        
+        </div>
+
+        <div class="selectAlgoDiv">
+            <select name="selectAlgo" id="selectAlgoId">
+                <option value="dij">Dijkstra's</option>
+                <option value="ast">A-Star</option>
+                <option value="dfs">Depth First Search</option>
+                <option value="bfs">Breadth First Search</option>
+                <!-- <option value="item5">Item5</option> -->
+            </select>
+            <!-- <span class="custom-arrow"></span> -->
+        </div>
+
+        <div class="selectHeuristicDiv">
+            <select name="selectHeu" id="selectHeuId">
+                <option value="man">Manhattan Distance</option>
+                <option value="euc">Euclidean Distance</option>
+                <!-- <option value="item3">Item3</option>
+                <option value="item4">Item4</option>
+                <option value="item5">Item5</option> -->
+            </select>
+            <!-- <span class="custom-arrow"></span> -->
+        </div>
+
+        <div class="selectHeuristicValueDiv">
+            <select name="selectHVal" id="selecHeuValId">
+                <!-- <option value="">Manhattan Distance</option>
+                <option value="euc">Euclidean Distance</option>
+                <option value="item3">Item3</option>
+                <option value="item4">Item4</option>
+                <option value="item5">Item5</option> -->
+
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+
+            </select>
+            <!-- <span class="custom-arrow"></span> -->
+        </div>
+
+
+        <button class="button" id="startSimulation" type="submit">
+            <span>
+                Start Simulation
+            </span>
+        </button>
+
+        <button class="button" id="stopSimulation" type="submit">
+            <span>
+                Stop Simulation
+            </span>
+        </button>
+        <button class="button" id="redrawGraph" type="submit">
+            <span>
+                Redraw Graph
+            </span>
+        </button>
+        <button class="button" id="generateNewGraph" type="submit">
+            <span>
+                New Graph
+            </span>
+        </button>
+
+
+
+    </div>
+<!-- 
+    <div class="slidecontainer">
+        <div>
+            <p>
+                Animation Speed: <span id="animationSpeedDisplay">10</span>
+                <span>Nodes Per Second</span>
+            </p>
+        </div>
+        <input type="range" min="1" max="100" value="10" class="slider" id="animationSpeed">
+    </div> -->
+
+    <div id="graphDisplay">
+        <table id="graph"></table>
+    </div>
+    <div class="footer" id="footer">
+
+        <div class="slidecontainer">
+            <div>
+                <p>
+                    Animation Speed: <span id="animationSpeedDisplay">50</span>
+                    <span>Nodes Per Second</span>
+                </p>
+            </div>
+            <input type="range" min="1" max="100" value="50" class="slider" id="animationSpeed">
+        </div>
+    
+
+
+    </div>
+
+
+</body>
+
+</html>

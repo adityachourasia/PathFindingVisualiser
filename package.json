@@ -1,0 +1,7 @@
+{
+    "type": "module",
+    "dependencies": {
+        "bootstrap-icons": "^1.9.1",
+        "prompt-sync": "^4.2.0"
+    }
+}
